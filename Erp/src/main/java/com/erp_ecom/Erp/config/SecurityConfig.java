@@ -29,6 +29,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests( auth -> auth
                         .requestMatchers("/orders/**").authenticated()
                         .requestMatchers("/product/**").authenticated()
+                        .requestMatchers("/product-categories/**").authenticated()
                         .anyRequest().permitAll() )
                 .sessionManagement( session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))

@@ -14,4 +14,6 @@ public interface UserRepository
 
     Optional<User> findByEmail(String email);
 
+    User findByUserName( String username);
+
 }
